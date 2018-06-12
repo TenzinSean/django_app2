@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{% block head_title %}Hello {% endblock head_title %}</title>
+  {% include 'snippets/style.html' %}
+</head>
+<body>
+
+  <h1>Home 1</h1>
+  {% include 'snippets/nav.html' %}
+  <div class="container">
+    {% block content %}
+    Hello there!
+    {% endblock content %}
+  </div>
+
+  
+
+{% include 'snippets/script.html' %}
+</body>
+</html>

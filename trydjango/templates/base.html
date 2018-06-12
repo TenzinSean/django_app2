@@ -1,0 +1,45 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Hello </title>
+</head>
+<body>
+  {% extends "home.html" %}
+
+  {% block content %}
+  {{ block.super }}
+
+  <h1>My cat time</h1>
+
+  <h1>Hi, there i am coming back {{ html_content }}</h1>
+  <p>My number is : {{ num }} </p>
+
+  <p>
+
+    {% if html_var %}
+    Random number: {{ num }}
+
+    {% endif %}
+  </p>
+
+  <p>
+    {% for some_item in some %}
+
+      {{ some_item }} <br/>
+    {% endfor %}
+  </p>
+
+  {% load static %}
+  <img src="{% static "https://images-na.ssl-images-amazon.com/images/S/sgp-catalog-images/region_US/disney-TDW0NNG1-Full-Image_GalleryBackground-en-US-1483993494274._RI_SX940_.jpg" %}" alt="image" />
+
+
+</body>
+</html>
+
+
+{% endblock content %}
